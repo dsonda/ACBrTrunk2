@@ -637,7 +637,8 @@ begin
                LFill(ENDERECO) +
                LFill(NUM) +
                LFill(COMPL) +
-               LFill(BAIRRO) ) ;
+               LFill(BAIRRO) +
+               DadosAdicionais );
         end;
         /// Registros FILHOS
         WriteRegistro0175( Reg0001.Registro0150.Items[intFor] );
@@ -750,7 +751,8 @@ begin
                       LFill( COD_GEN ) +
                       LFill( COD_LST ) +
                       VLFill( ALIQ_ICMS, 0, 2 )+
-											ifthen(DT_INI >= EncodeDate(2017,01,01),LFill( CEST ),'');
+											ifthen(DT_INI >= EncodeDate(2017,01,01),LFill( CEST ),'') +
+                      DadosAdicionais;
           //-- Write
           if Assigned(FOnWriteRegistro0200) then
              FOnWriteRegistro0200(strLinha);

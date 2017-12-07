@@ -848,10 +848,13 @@ begin
                QTD_REG_BLC := Bloco_0.Registro0015Count;
             end;
          end;
-         with New do
+         if Assigned(Bloco_0.Registro0001.Registro0100) then
          begin
-            REG_BLC := '0100';
-            QTD_REG_BLC := 1;
+           with New do
+           begin
+              REG_BLC := '0100';
+              QTD_REG_BLC := 1;
+           end;
          end;
          if Bloco_0.Registro0150Count > 0 then
          begin

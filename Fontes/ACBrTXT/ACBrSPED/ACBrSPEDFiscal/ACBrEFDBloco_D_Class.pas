@@ -799,7 +799,8 @@ begin
                       LFill( COD_CTA ) +
                       IfThen(DT_INI >= EncodeDate(2018,01,01),
                         LFill( COD_MUN_ORIG ) +
-                        LFill( COD_MUN_DEST),EmptyStr);
+                        LFill( COD_MUN_DEST),EmptyStr) +
+                      DadosAdicionais;
           //-- Write
           if Assigned(FOnWriteRegistroD100) then
              FOnWriteRegistroD100(strLinha);
@@ -1854,7 +1855,8 @@ begin
                LFill( VL_BC_ICMS_UF,0,2 ) +
                LFill( VL_ICMS_UF,0,2 ) +
                LFill( VL_RED_BC,0,2 ) +
-               LFill( COD_OBS  ) ) ;
+               LFill( COD_OBS  ) +
+               DadosAdicionais );
         end;
         RegistroD990.QTD_LIN_D := RegistroD990.QTD_LIN_D + 1;
      end;

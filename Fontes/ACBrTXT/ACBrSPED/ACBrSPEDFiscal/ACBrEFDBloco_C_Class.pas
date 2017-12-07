@@ -1385,7 +1385,8 @@ begin
                  LFill( VL_PIS,0,2, true ) +
                  LFill( VL_COFINS,0,2, true ) +
                  LFill( VL_PIS_ST,0,2, true ) +
-                 LFill( VL_COFINS_ST,0,2, true ) ) ;
+                 LFill( VL_COFINS_ST,0,2, true ) +
+                 DadosAdicionais );
           end
           else
           begin
@@ -1417,7 +1418,8 @@ begin
                  LFill( VL_PIS,0,2,True ) +
                  LFill( VL_COFINS,0,2,True) +
                  LFill( VL_PIS_ST,0,2,True ) +
-                 LFill( VL_COFINS_ST,0,2, True) ) ;
+                 LFill( VL_COFINS_ST,0,2, True) +
+                 DadosAdicionais );
           end;
         end;
         /// Registros FILHOS
@@ -1597,7 +1599,8 @@ begin
                LFill( COD_AUT ) +
                LFill( VL_DA,0,2 ) +
                LFill( DT_VCTO ) +
-               LFill( DT_PGTO ) ) ;
+               LFill( DT_PGTO ) +
+               DadosAdicionais );
         end;
         RegistroC990.QTD_LIN_C := RegistroC990.QTD_LIN_C + 1;
      end;
@@ -2005,7 +2008,8 @@ begin
                        LFill( ALIQ_COFINS_R, 0, 4, True, '0', '#0.0000' ) +
                        LFill( VL_COFINS, 0, 2,True ) +
                        LFill( COD_CTA )+
-                       ifthen( FBloco_0.Registro0000.COD_VER > vlVersao111 ,LFill( VL_ABAT_NT, 0, 2,True ),'');
+                       ifthen( FBloco_0.Registro0000.COD_VER > vlVersao111 ,LFill( VL_ABAT_NT, 0, 2,True ),'') +
+                       DadosAdicionais;
           //-- Write
           if Assigned(TACBrSPEDFiscal(FOwner).EventsBloco_C.OnWriteRegistroC170) then
              TACBrSPEDFiscal(FOwner).EventsBloco_C.OnWriteRegistroC170(strLinha);
@@ -2075,7 +2079,8 @@ begin
           Add( LFill('C172') +
                LFill( VL_BC_ISSQN,0,2 ) +
                LFill( ALIQ_ISSQN,0,2 ) +
-               LFill( VL_ISSQN,0,2 ) ) ;
+               LFill( VL_ISSQN,0,2 ) +
+               DadosAdicionais );
         end;
         RegistroC990.QTD_LIN_C := RegistroC990.QTD_LIN_C + 1;
      end;
@@ -2457,7 +2462,8 @@ begin
                LFill( VL_ICMS_ST,0,2 ) +
                LFill( VL_RED_BC,0,2 ) +
                LFill( VL_IPI,0,2 ) +
-               LFill( COD_OBS ) ) ;
+               LFill( COD_OBS ) +
+               DadosAdicionais );
         end;
         RegistroC990.QTD_LIN_C := RegistroC990.QTD_LIN_C + 1;
         if FBloco_0.Registro0000.COD_VER > vlVersao111 then
@@ -2891,7 +2897,8 @@ begin
                LFill( CRZ,6 ) +
                IfThen( DT_INI >= EncodeDate(2013,10,01), LFill( NUM_COO_FIN, 9) , LFill( NUM_COO_FIN, 6) ) +
                LFill( GT_FIN,0,2  ) +
-               LFill( VL_BRT,0,2  ) ) ;
+               LFill( VL_BRT,0,2  ) +
+               DadosAdicionais );
         end;
         /// Registros FILHOS
         WriteRegistroC410( RegC400.RegistroC405.Items[intFor] ) ;
@@ -2941,7 +2948,8 @@ begin
                LFill( COD_TOT_PAR ) +
                LFill( VLR_ACUM_TOT,0,2) +
                LFill( NR_TOT, 2, true) +
-               LFill( DESCR_NR_TOT ) ) ;
+               LFill( DESCR_NR_TOT ) +
+               DadosAdicionais );
         end;
         /// Registros FILHOS
         WriteRegistroC425( RegC405.RegistroC420.Items[intFor] );
@@ -2976,7 +2984,8 @@ begin
                LFill( UNID ) +
                LFill( VL_ITEM,0,2 ) +
                LFill( VL_PIS ,0,2 ) +
-               LFill( VL_COFINS ,0,2 ) ) ;
+               LFill( VL_COFINS ,0,2 ) +
+               DadosAdicionais );
         end;
         WriteRegistroC430( RegC420.RegistroC425.Items[intFor] ) ;
         RegistroC990.QTD_LIN_C := RegistroC990.QTD_LIN_C + 1;
@@ -3233,7 +3242,8 @@ begin
                LFill( VL_OPR,0,2 ) +
                LFill( VL_BC_ICMS,0,2 ) +
                LFill( VL_ICMS,0,2 ) +
-               LFill( COD_OBS ) ) ;
+               LFill( COD_OBS ) +
+               DadosAdicionais );
         end;
         RegistroC990.QTD_LIN_C := RegistroC990.QTD_LIN_C + 1;
      end;
@@ -3544,7 +3554,8 @@ begin
                LFill( VL_BC_ICMS_ST,0,2 ) +
                LFill( VL_ICMS_ST,0,2 ) +
                LFill( VL_RED_BC,0,2 ) +
-               LFill( COD_OBS  ) ) ;
+               LFill( COD_OBS  ) +
+               DadosAdicionais );
         end;
         WriteRegistroC591( RegC500.RegistroC590.Items[intFor] ) ;
         RegistroC990.QTD_LIN_C := RegistroC990.QTD_LIN_C + 1;
