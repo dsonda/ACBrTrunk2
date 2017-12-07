@@ -241,6 +241,7 @@ type
     fMUN_ITEM: integer;
     fVL_SERV: currency;
     fVL_OUT: currency;
+    fDadosAdicionais: string; /// Dados adicionais para concatenar ao final da linha
 
     FRegistroD120: TRegistroD120List;
   public
@@ -251,6 +252,7 @@ type
     property COD_ITEM: string read fCOD_ITEM write fCOD_ITEM;
     property VL_SERV: currency read fVL_SERV write fVL_SERV;
     property VL_OUT: currency read fVL_OUT write fVL_OUT;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
 
     property RegistroD120: TRegistroD120List read FRegistroD120 write FRegistroD120;
   end;
@@ -1278,6 +1280,7 @@ type
     FVL_PIS: Currency;                  //Valor do PIS
     FVL_COFINS: Currency;               //Valor da COFINS
     FCOD_CTA: String;                   //Código da conta analítica contábil debitada/creditada
+    fDadosAdicionais: string; /// Dados adicionais para concatenar ao final da linha
   public
     property NUM_ITEM: String read FNUM_ITEM write FNUM_ITEM;
     property COD_ITEM: String read FCOD_ITEM write FCOD_ITEM;
@@ -1298,6 +1301,7 @@ type
     property VL_PIS: Currency read FVL_PIS write FVL_PIS;
     property VL_COFINS: Currency read FVL_COFINS write FVL_COFINS;
     property COD_CTA: String read FCOD_CTA write FCOD_CTA;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
   end;
 
   TRegistroD510List = class(TObjectList)

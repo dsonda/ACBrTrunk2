@@ -642,10 +642,12 @@ type
     fNUM_PARC: String;       /// Número da parcela a receber/pagar
     fDT_VCTO: TDateTime;     /// Data de vencimento da parcela
     fVL_PARC: currency;      /// Valor da parcela a receber/pagar
+    fDadosAdicionais: string; /// Dados adicionais para concatenar ao final da linha
   public
     property NUM_PARC: String read FNUM_PARC write FNUM_PARC;
     property DT_VCTO: TDateTime read FDT_VCTO write FDT_VCTO;
     property VL_PARC: currency read FVL_PARC write FVL_PARC;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
   end;
 
   /// Registro C141 - Lista
@@ -2424,6 +2426,7 @@ type
     fVL_PIS: currency;          /// Valor do PIS
     fVL_COFINS: currency;       /// Valor da COFINS
     fCOD_CTA: String;           /// Código da conta analítica contábil debitada/creditada
+    fDadosAdicionais: string;   /// Dados adicionais para concatenar ao final da linha
   public
     property NUM_ITEM: String read fNUM_ITEM write fNUM_ITEM;
     property COD_ITEM: String read fCOD_ITEM write fCOD_ITEM;
@@ -2445,6 +2448,7 @@ type
     property VL_PIS: currency read fVL_PIS write fVL_PIS;
     property VL_COFINS: currency read fVL_COFINS write fVL_COFINS;
     property COD_CTA: String read fCOD_CTA write fCOD_CTA;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
   end;
 
   /// Registro C510 - Lista

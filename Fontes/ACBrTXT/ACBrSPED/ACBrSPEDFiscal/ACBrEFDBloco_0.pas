@@ -590,9 +590,11 @@ type
   private
     fCOD_INF: String;     /// Código da informação complementar do documento fiscal:
     fTXT: String;         /// Texto livre:
+    fDadosAdicionais: string; /// Dados adicionais para concatenar ao final da linha
   public
     property COD_INF: String read FCOD_INF write FCOD_INF;
     property TXT: String read FTXT write FTXT;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
   end;
 
   /// Registro 0450 - Lista

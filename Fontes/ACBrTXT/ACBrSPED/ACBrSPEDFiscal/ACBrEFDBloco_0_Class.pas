@@ -1023,7 +1023,8 @@ begin
         begin
           Add( LFill('0450') +
                LFill( COD_INF ) +
-               LFill( TXT ) ) ;
+               LFill( TXT ) +
+               DadosAdicionais ) ;
         end;
         Registro0990.QTD_LIN_0 := Registro0990.QTD_LIN_0 + 1;
      end;

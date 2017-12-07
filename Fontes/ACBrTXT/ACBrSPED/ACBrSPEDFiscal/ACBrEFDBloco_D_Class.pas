@@ -880,7 +880,8 @@ begin
                       LFill(NUN_ITEM, 3)   +
                       LFill(COD_ITEM )     +
                       LFill(VL_SERV, 0, 2) +
-                      LFill(VL_OUT, 0, 2);
+                      LFill(VL_OUT, 0, 2) +
+                      DadosAdicionais;
           //-- Write
           if Assigned(FOnWriteRegistroD110) then
              FOnWriteRegistroD110(strLinha);
@@ -1777,7 +1778,8 @@ begin
                       lFill( COD_PART ) +
                       lFill( VL_PIS, 0, 2) +
                       lFill( VL_COFINS, 0, 2) +
-                      lFill( COD_CTA );
+                      lFill( COD_CTA ) +
+                      DadosAdicionais;
           //-- Write
           if Assigned(FOnWriteRegistroD510) then
              FOnWriteRegistroD510(strLinha);

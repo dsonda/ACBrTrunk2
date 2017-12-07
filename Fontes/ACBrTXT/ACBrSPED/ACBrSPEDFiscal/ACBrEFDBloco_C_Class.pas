@@ -1857,7 +1857,8 @@ begin
           Add( LFill('C141') +
                LFill( NUM_PARC ) +
                LFill( DT_VCTO ) +
-               LFill( VL_PARC,0,2 ) ) ;
+               LFill( VL_PARC,0,2 ) +
+               DadosAdicionais ) ;
         end;
         RegistroC990.QTD_LIN_C := RegistroC990.QTD_LIN_C + 1;
      end;
@@ -3512,7 +3513,8 @@ begin
                       LFill( COD_PART  ) +
                       LFill( VL_PIS,0,2 ) +
                       LFill( VL_COFINS,0,2 ) +
-                      LFill( COD_CTA );
+                      LFill( COD_CTA ) +
+                      DadosAdicionais;
           //-- Write
           if Assigned(TACBrSPEDFiscal(FOwner).EventsBloco_C.OnWriteRegistroC510) then
              TACBrSPEDFiscal(FOwner).EventsBloco_C.OnWriteRegistroC510(strLinha);
