@@ -190,7 +190,7 @@ type
     fVL_COFINS_ST: currency;            /// Valor total da COFINS retido por substituição tributária
     fDadosAdicionais: string;           /// Dados adicionais para concatenar ao final da linha
 
-    FRegistroC101: TRegistroC101List;  /// BLOCO C - Lista de RegistroC105 (FILHO) 
+    FRegistroC101: TRegistroC101List;  /// BLOCO C - Lista de RegistroC105 (FILHO)
     FRegistroC105: TRegistroC105List;  /// BLOCO C - Lista de RegistroC105 (FILHO)
     FRegistroC110: TRegistroC110List;  /// BLOCO C - Lista de RegistroC110 (FILHO)
     FRegistroC120: TRegistroC120List;  /// BLOCO C - Lista de RegistroC120 (FILHO)
