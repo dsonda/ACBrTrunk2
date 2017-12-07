@@ -108,6 +108,7 @@ type
     fTXT_COMPL: String;      /// Descrição complementar
     fCOD_CTA: String;        /// Código da conta analítica contábil debitada/creditada
     fVL_ITEM_IR: Double;       /// Valor do item para efeitos do Imposto de Renda.
+    fDadosAdicionais: string;  /// Dados adicionais para concatenar ao final da linha
 
     FRegistroH020: TRegistroH020List;  /// BLOCO H - Lista de RegistroH020 (FILHO)
     FRegistroH030: TRegistroH030List;  /// BLOCO H - Lista de RegistroH030 (FILHO)
@@ -126,6 +127,7 @@ type
     property TXT_COMPL: String read FTXT_COMPL write FTXT_COMPL;
     property COD_CTA: String read FCOD_CTA write FCOD_CTA;
     property VL_ITEM_IR : Double read fVL_ITEM_IR write fVL_ITEM_IR;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
     /// Registros FILHOS
     property RegistroH020: TRegistroH020List read FRegistroH020 write FRegistroH020;
     property RegistroH030: TRegistroH030List read FRegistroH030 write FRegistroH030;

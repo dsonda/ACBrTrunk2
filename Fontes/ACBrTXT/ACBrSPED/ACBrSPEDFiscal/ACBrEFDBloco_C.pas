@@ -182,6 +182,7 @@ type
     fVL_COFINS: currency;               /// Valor total da COFINS
     fVL_PIS_ST: currency;               /// Valor total do PIS retido por substituição tributária
     fVL_COFINS_ST: currency;            /// Valor total da COFINS retido por substituição tributária
+    fDadosAdicionais: string;           /// Dados adicionais para concatenar ao final da linha
 
     FRegistroC101: TRegistroC101List;  /// BLOCO C - Lista de RegistroC105 (FILHO) 
     FRegistroC105: TRegistroC105List;  /// BLOCO C - Lista de RegistroC105 (FILHO)
@@ -227,6 +228,7 @@ type
     property VL_COFINS: currency read FVL_COFINS write FVL_COFINS;
     property VL_PIS_ST: currency read FVL_PIS_ST write FVL_PIS_ST;
     property VL_COFINS_ST: currency read FVL_COFINS_ST write FVL_COFINS_ST;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
     /// Registros FILHOS
 	
     property RegistroC101: TRegistroC101List read FRegistroC101 write FRegistroC101;
@@ -377,6 +379,7 @@ type
     fVL_DA: Currency;              /// Valor do total do documento de arrecadação (principal, atualização monetária, juros e multa) // Prates
     fDT_VCTO: TDateTime;           /// Data de vencimento do documento de arrecadação
     fDT_PGTO: TDateTime;           /// Data de pagamento do documento de arrecadação, ou data do vencimento, no caso de ICMS antecipado a recolher.
+    fDadosAdicionais: string;      /// Dados adicionais para concatenar ao final da linha
   public
     property COD_DA: TACBrDoctoArrecada read FCOD_DA write FCOD_DA;
     property UF: String read FUF write FUF;
@@ -385,6 +388,7 @@ type
     property VL_DA: currency read FVL_DA write FVL_DA; // Prats
     property DT_VCTO: TDateTime read FDT_VCTO write FDT_VCTO;
     property DT_PGTO: TDateTime read FDT_PGTO write FDT_PGTO;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
   end;
 
   /// Registro C112 - Lista
@@ -763,6 +767,7 @@ type
     fVL_COFINS: currency;                 /// Valor da COFINS
     fCOD_CTA: String;                     /// Código da conta analítica contábil debitada/creditada
     fVL_ABAT_NT: currency;                /// Valor do abatimento não tributado e não comercial
+    fDadosAdicionais: string;             /// Dados adicionais para concatenar ao final da linha
 
     FRegistroC171: TRegistroC171List;  /// BLOCO C - Lista de RegistroC141 (FILHO fo FILHO)
     FRegistroC172: TRegistroC172List;  /// BLOCO C - Lista de RegistroC141 (FILHO fo FILHO)
@@ -818,6 +823,7 @@ type
     property VL_COFINS: currency                 read FVL_COFINS        write FVL_COFINS;
     property COD_CTA: String                     read FCOD_CTA          write FCOD_CTA;
     property VL_ABAT_NT: currency                read FVL_ABAT_NT       write FVL_ABAT_NT;
+    property DadosAdicionais: string             read fDadosAdicionais  write fDadosAdicionais;
     /// Registros FILHOS
     property RegistroC171: TRegistroC171List read FRegistroC171 write FRegistroC171;
     property RegistroC172: TRegistroC172List read FRegistroC172 write FRegistroC172;
@@ -871,10 +877,12 @@ type
     fVL_BC_ISSQN: currency;    /// Valor da base de cálculo do ISSQN
     fALIQ_ISSQN: currency;     /// Alíquota do ISSQN
     fVL_ISSQN: currency;       /// Valor do ISSQN
+    fDadosAdicionais: string;  /// Dados adicionais para concatenar ao final da linha
   public
     property VL_BC_ISSQN: currency read FVL_BC_ISSQN write FVL_BC_ISSQN;
     property ALIQ_ISSQN: currency read FALIQ_ISSQN write FALIQ_ISSQN;
     property VL_ISSQN: currency read FVL_ISSQN write FVL_ISSQN;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
   end;
 
   /// Registro C172 - Lista
@@ -1225,6 +1233,7 @@ type
     fVL_IPI: currency;         /// Parcela correspondente ao "Valor do IPI" referente à combinação CST_ICMS, CFOP e alíquota do ICMS.
     fCOD_OBS: String;          /// Código da observação do lançamento fiscal (campo 02 do Registro 0460
     FRegistroC191: TRegistroC191List;  /// BLOCO C - Lista de RegistroC191 (FILHO)
+    fDadosAdicionais: string;  /// Dados adicionais para concatenar ao final da linha
   public
     constructor Create; virtual; /// Create
     destructor Destroy; override; /// Destroy
@@ -1240,6 +1249,7 @@ type
     property VL_IPI: currency read FVL_IPI write FVL_IPI;
     property COD_OBS: String read FCOD_OBS write FCOD_OBS;
     property RegistroC191: TRegistroC191List read FRegistroC191 write FRegistroC191;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
   end;
 
   /// Registro C190 - Lista
@@ -1741,6 +1751,7 @@ type
     fNUM_COO_FIN: integer;    /// Número do Contador de Ordem de Operação do último documento emitido no dia. (Número do COO na Redução Z)
     fGT_FIN: currency;        /// Valor do Grande Total final
     fVL_BRT: currency;        /// Valor da venda bruta
+    fDadosAdicionais: string; /// Dados adicionais para concatenar ao final da linha
 
     FRegistroC410: TRegistroC410List;  /// BLOCO C - Lista de RegistroC410 (FILHO)
     FRegistroC420: TRegistroC420List;  /// BLOCO C - Lista de RegistroC420 (FILHO)
@@ -1756,6 +1767,7 @@ type
     property NUM_COO_FIN: integer read fNUM_COO_FIN write fNUM_COO_FIN;
     property GT_FIN: currency read fGT_FIN write fGT_FIN;
     property VL_BRT: currency read fVL_BRT write fVL_BRT;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
 
     property RegistroC410: TRegistroC410List read FRegistroC410 write FRegistroC410;
     property RegistroC420: TRegistroC420List read FRegistroC420 write FRegistroC420;
@@ -1804,6 +1816,7 @@ type
     fVLR_ACUM_TOT: currency;  /// Valor acumulado no totalizador, relativo à respectiva Redução Z.
     fNR_TOT: integer;         /// Número do totalizador quando ocorrer mais de uma situação com a mesma carga tributária efetiva.
     fDESCR_NR_TOT: String;    /// Descrição da situação tributária relativa ao totalizador parcial, quando houver mais de um com a mesma carga tributária efetiva.
+    fDadosAdicionais: string; /// Dados adicionais para concatenar ao final da linha
 
     FRegistroC425: TRegistroC425List;  /// BLOCO C - Lista de RegistroC425 (FILHO)
   public
@@ -1814,6 +1827,7 @@ type
     property VLR_ACUM_TOT: currency read fVLR_ACUM_TOT write fVLR_ACUM_TOT;
     property NR_TOT: integer read fNR_TOT write fNR_TOT;
     property DESCR_NR_TOT: String read fDESCR_NR_TOT write fDESCR_NR_TOT;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
     /// Registros FILHOS
     property RegistroC425: TRegistroC425List read FRegistroC425 write FRegistroC425;
   end;
@@ -1840,6 +1854,7 @@ type
     fVL_PIS: currency;           /// Valor do PIS
     fVL_COFINS: currency;        /// Valor da COFINS
     FRegistroC430: TRegistroC430List;  /// BLOCO C - Lista de RegistroC430 (FILHO)
+    fDadosAdicionais: string;    /// Dados adicionais para concatenar ao final da linha
   public
     constructor Create; virtual; /// Create
     destructor Destroy; override; /// Destroy
@@ -1850,6 +1865,7 @@ type
     property VL_PIS: currency read fVL_PIS write fVL_PIS;
     property VL_COFINS: currency read fVL_COFINS write fVL_COFINS;
     property RegistroC430: TRegistroC430List read FRegistroC430 write FRegistroC430;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
   end;
 
   /// Registro C425 - Lista
@@ -2079,6 +2095,7 @@ type
     fVL_BC_ICMS: currency;     /// Valor acumulado da base de cálculo do ICMS, referente à combinação de CST_ICMS, CFOP, e alíquota do ICMS.
     fVL_ICMS: currency;        /// Valor acumulado do ICMS, referente à combinação de CST_ICMS, CFOP e alíquota do ICMS.
     fCOD_OBS: String;      /// Código da observação do lançamento fiscal (campo 02 do Registro 0460)
+    fDadosAdicionais: string;  /// Dados adicionais para concatenar ao final da linha
   public
     property CST_ICMS: String read FCST_ICMS write FCST_ICMS;
     property CFOP: String read FCFOP write FCFOP;
@@ -2087,6 +2104,7 @@ type
     property VL_BC_ICMS: currency read FVL_BC_ICMS write FVL_BC_ICMS;
     property VL_ICMS: currency read FVL_ICMS write FVL_ICMS;
     property COD_OBS: String read FCOD_OBS write FCOD_OBS;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
   end;
 
   /// Registro C490 - Lista
@@ -2316,6 +2334,7 @@ type
     fVL_RED_BC: currency;     /// Valor não tributado em função da redução da base de cálculo do ICMS, referente à combinação de CST_ICMS, CFOP e alíquota do ICMS.
     fCOD_OBS: String;         /// Código da observação do lançamento fiscal (campo 02 do Registro 0460)
     FRegistroC591: TRegistroC591List;
+    fDadosAdicionais: string; /// Dados adicionais para concatenar ao final da linha
   public
     constructor Create; virtual; /// Create
     destructor Destroy; override; /// Destroy
@@ -2330,6 +2349,7 @@ type
     property VL_RED_BC: currency read fVL_RED_BC write fVL_RED_BC;
     property COD_OBS: String read fCOD_OBS write fCOD_OBS;
     property RegistroC591: TRegistroC591List read FRegistroC591 write FRegistroC591;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
   end;
 
   /// Registro C590 - Lista

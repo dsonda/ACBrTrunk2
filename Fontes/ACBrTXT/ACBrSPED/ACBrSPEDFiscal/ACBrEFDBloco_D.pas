@@ -132,6 +132,7 @@ type
     fCOD_CTA: String;               /// Código da conta analitica contabil debitada/creditada
     fCOD_MUN_ORIG: String;          /// Código municipio origem conf. tab IBGE
     fCOD_MUN_DEST: String;          /// Código municipio destino conf. tab IBGE
+    fDadosAdicionais: string;       /// Dados adicionais para concatenar ao final da linha
 
     FRegistroD101: TRegistroD101List;
     FRegistroD110: TRegistroD110List;
@@ -171,6 +172,7 @@ type
     property COD_CTA: String read FCOD_CTA write FCOD_CTA;
     property COD_MUN_ORIG: String read FCOD_MUN_ORIG write FCOD_MUN_ORIG;
     property COD_MUN_DEST: String read FCOD_MUN_DEST write FCOD_MUN_DEST;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
 
     property RegistroD101: TRegistroD101List read FRegistroD101 write FRegistroD101;
     property RegistroD110: TRegistroD110List read FRegistroD110 write FRegistroD110;
@@ -1338,6 +1340,7 @@ type
     fVL_ICMS_ST: currency;    /// Parcela correspondente ao valor creditado/debitado do ICMS da substituição tributária, referente à combinação de CST_ICMS,  CFOP, e alíquota do ICMS.
     fVL_RED_BC: currency;     /// Valor não tributado em função da redução da base de cálculo do ICMS, referente à combinação de CST_ICMS, CFOP e alíquota do ICMS.
     fCOD_OBS: String;         /// Código da observação do lançamento fiscal (campo 02 do Registro 0460)
+    fDadosAdicionais: string; /// Dados adicionais para concatenar ao final da linha
   public
     property CST_ICMS: String read fCST_ICMS write fCST_ICMS;
     property CFOP: String read fCFOP write fCFOP;
@@ -1349,6 +1352,7 @@ type
     property VL_ICMS_UF: currency read fVL_ICMS_ST write fVL_ICMS_ST;
     property VL_RED_BC: currency read fVL_RED_BC write fVL_RED_BC;
     property COD_OBS: String read fCOD_OBS write fCOD_OBS;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
   end;
 
   TRegistroD590List = class(TObjectList)

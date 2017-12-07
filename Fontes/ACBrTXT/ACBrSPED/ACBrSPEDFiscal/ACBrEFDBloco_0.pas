@@ -244,6 +244,7 @@ type
     fNUM: String;         /// Número do imóvel:
     fCOMPL: String;       /// Dados complementares do endereço:
     fBAIRRO: String;      /// Bairro em que o imóvel está situado:
+    fDadosAdicionais: string; /// Dados adicionais para concatenar ao final da linha
 
     FRegistro0175: TRegistro0175List;  /// BLOCO C - Lista de Registro0175 (FILHO)
   public
@@ -262,6 +263,7 @@ type
     property NUM: String read FNUM write FNUM;
     property COMPL: String read FCOMPL write FCOMPL;
     property BAIRRO: String read FBAIRRO write FBAIRRO;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
     /// Registros FILHOS
     property Registro0175: TRegistro0175List read FRegistro0175 write FRegistro0175;
   end;
@@ -343,6 +345,7 @@ type
     fCOD_LST: String;          /// Código serviço Anexo I - Lei nº116/03:
     fALIQ_ICMS: Variant;      /// Alíquota ICMS aplicável (operações internas):
 		FCEST : string;
+    fDadosAdicionais: string; /// Dados adicionais para concatenar ao final da linha
 
     FRegistro0205: TRegistro0205List;  /// BLOCO C - Lista de Registro0205 (FILHO)
     FRegistro0206: TRegistro0206List;  /// BLOCO C - Lista de Registro0206 (FILHO)
@@ -364,6 +367,7 @@ type
     property COD_LST: String read FCOD_LST write FCOD_LST;
     property ALIQ_ICMS: Variant read FALIQ_ICMS write FALIQ_ICMS;
 		property CEST : String read FCEST write FCEST;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
     /// Registros FILHOS
     property Registro0205: TRegistro0205List read FRegistro0205 write FRegistro0205;
     property Registro0206: TRegistro0206List read FRegistro0206 write FRegistro0206;
