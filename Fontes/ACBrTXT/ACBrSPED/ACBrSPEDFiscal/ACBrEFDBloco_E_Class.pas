@@ -1303,7 +1303,7 @@ begin
           end;
 }
           Add( LFill('E510') +
-               LFill( CFOP,4 ) +
+               LFill( CFOP ) +
                // LFill( strCST_IPI ) +
                LFill( CST_IPI ) +
                LFill( VL_CONT_IPI,0 ) +

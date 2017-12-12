@@ -1238,7 +1238,7 @@ begin
                LFill( VL_ITEM,0,2 ) +
                LFill( VL_DESC,0,2 ) +
                LFill( CST_ICMS,3 ) +
-               LFill( CFOP,4 ) +
+               LFill( CFOP ) +
                LFill( VL_BC_ICMS,0,2 ) +
                LFill( ALIQ_ICMS,0,2 ) +
                LFill( VL_ICMS,0,2 ) +
