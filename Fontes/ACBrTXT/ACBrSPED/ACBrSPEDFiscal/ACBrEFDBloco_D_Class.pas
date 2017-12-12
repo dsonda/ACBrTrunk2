@@ -1671,7 +1671,7 @@ begin
                       lFill( VL_ITEM, 0, 2) +
                       lFill( VL_DESC, 0, 2) +
                       lFill( CST_ICMS, 3 ) +
-                      lFill( CFOP, 4 ) +
+                      lFill( CFOP ) +
                       lFill( VL_BC_ICMS, 0, 2) +
                       lFill( ALIQ_ICMS, 0, 2) +
                       lFill( VL_ICMS, 0, 2) +
@@ -1752,7 +1752,7 @@ begin
         begin
           Add( LFill('D590') +
                LFill( CST_ICMS,3 ) +
-               LFill( CFOP,4 ) +
+               LFill( CFOP ) +
                LFill( ALIQ_ICMS,6,2 ) +
                LFill( VL_OPR,0,2 ) +
                LFill( VL_BC_ICMS,0,2 ) +
@@ -1889,7 +1889,7 @@ begin
         begin
           Add( LFill('D696') +
                LFill( CST_ICMS,3 ) +
-               LFill( CFOP,4 ) +
+               LFill( CFOP ) +
                LFill( ALIQ_ICMS,6,2 ) +
                LFill( VL_OPR,0,2 ) +
                LFill( VL_BC_ICMS,0,2 ) +

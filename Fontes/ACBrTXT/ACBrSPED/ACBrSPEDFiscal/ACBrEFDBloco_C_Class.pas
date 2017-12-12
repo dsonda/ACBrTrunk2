@@ -1909,7 +1909,7 @@ begin
                        LFill( VL_DESC, 0, 2 ) +
                        LFill( Integer(IND_MOV), 0 ) +
                        LFill( CST_ICMS, 3 ) +
-                       LFill( CFOP, 4 ) +
+                       LFill( CFOP ) +
                        LFill( COD_NAT ) +
                        LFill( VL_BC_ICMS, 0, 2 ) +
                        LFill( ALIQ_ICMS,  0, 2 ) +
@@ -2297,7 +2297,7 @@ begin
         begin
           Add( LFill('C190') +
                LFill( CST_ICMS, 3 ) +
-               LFill( CFOP,4 ) +
+               LFill( CFOP ) +
                LFill( ALIQ_ICMS,6,2 ) +
                LFill( VL_OPR,0,2 ) +
                LFill( VL_BC_ICMS,0,2 ) +
@@ -2472,7 +2472,7 @@ begin
         begin
           Add( LFill('C320') +
                LFill( CST_ICMS,3 ) +
-               LFill( CFOP,4 ) +
+               LFill( CFOP ) +
                LFill( ALIQ_ICMS,6,2 ) +
                LFill( VL_OPR,0,2 ) +
                LFill( VL_BC_ICMS,0,2 ) +
@@ -2681,7 +2681,7 @@ begin
         begin
           Add( LFill('C390') +
                LFill( CST_ICMS,3 ) +
-               LFill( CFOP,4 ) +
+               LFill( CFOP ) +
                LFill( ALIQ_ICMS,0,2 ) +
                LFill( VL_OPR,0,2 ) +
                LFill( VL_BC_ICMS,0,2 ) +
@@ -3008,7 +3008,7 @@ begin
                       LFill( UNID ) +
                       LFill( VL_ITEM,0,2 ) +
                       LFill( CST_ICMS,3 ) +
-                      LFill( CFOP,4 ) +
+                      LFill( CFOP ) +
                       LFill( ALIQ_ICMS,6,2 ) +
                       LFill( VL_PIS,0,2 ) +
                       LFill( VL_COFINS,0,2 );
@@ -3080,7 +3080,7 @@ begin
         begin
           Add( LFill('C490') +
                LFill( CST_ICMS,3 ) +
-               LFill( CFOP,4 ) +
+               LFill( CFOP ) +
                LFill( ALIQ_ICMS,6,2 ) +
                LFill( VL_OPR,0,2 ) +
                LFill( VL_BC_ICMS,0,2 ) +
@@ -3292,7 +3292,7 @@ begin
                       LFill( VL_ITEM,0,2 ) +
                       LFill( VL_DESC,0,2 ) +
                       LFill( CST_ICMS,3 ) +
-                      LFill( CFOP,4 ) +
+                      LFill( CFOP ) +
                       LFill( VL_BC_ICMS,0,2 ) +
                       LFill( ALIQ_ICMS,0,2 ) +
                       LFill( VL_ICMS,0,2 ) +
@@ -3338,7 +3338,7 @@ begin
         begin
           Add( LFill('C590') +
                LFill( CST_ICMS,3 ) +
-               LFill( CFOP,4 ) +
+               LFill( CFOP ) +
                LFill( ALIQ_ICMS,6,2 ) +
                LFill( VL_OPR,0,2 ) +
                LFill( VL_BC_ICMS,0,2 ) +
@@ -3528,7 +3528,7 @@ begin
                LFill( VL_ITEM,0,2 ) +
                LFill( VL_DESC,0,2 ) +
                LFill( CST_ICMS,3 ) +
-               LFill( CFOP,4 ) +
+               LFill( CFOP ) +
                LFill( ALIQ_ICMS,0,3 ) +
                LFill( VL_BC_ICMS,0,2 ) +
                LFill( VL_ICMS,0,2 ) +
@@ -3562,7 +3562,7 @@ begin
         begin
           Add( LFill('C690') +
                LFill( CST_ICMS,3 ) +
-               LFill( CFOP,4 ) +
+               LFill( CFOP ) +
                LFill( ALIQ_ICMS,6,2 ) +
                LFill( VL_OPR,0,2 ) +
                LFill( VL_BC_ICMS,0,2 ) +
@@ -3623,7 +3623,7 @@ begin
         begin
           Add( LFill('C790') +
                LFill( CST_ICMS,3 ) +
-               LFill( CFOP,4 ) +
+               LFill( CFOP ) +
                LFill( ALIQ_ICMS,6,2 ) +
                LFill( VL_OPR,0,2 ) +
                LFill( VL_BC_ICMS,0,2 ) +
@@ -3788,7 +3788,7 @@ begin
         begin
           Add( LFill('C850') +
                LFill( CST_ICMS,3 ) +
-               LFill( CFOP,4 ) +
+               LFill( CFOP ) +
                LFill( ALIQ_ICMS,6,2 ) +
                LFill( VL_OPR,0,2 ) +
                LFill( VL_BC_ICMS,0,2 ) +
@@ -3897,7 +3897,7 @@ begin
         begin
           Add( LFill('C890') +
                LFill( CST_ICMS,3 ) +
-               LFill( CFOP,4 ) +
+               LFill( CFOP ) +
                LFill( ALIQ_ICMS,6,2 ) +
                LFill( VL_OPR,0,2 ) +
                LFill( VL_BC_ICMS,0,2 ) +
