@@ -195,7 +195,7 @@ type
     FRegistroC110: TRegistroC110List;  /// BLOCO C - Lista de RegistroC110 (FILHO)
     FRegistroC120: TRegistroC120List;  /// BLOCO C - Lista de RegistroC120 (FILHO)
     FRegistroC130: TRegistroC130List;  /// BLOCO C - Lista de RegistroC130 (FILHO)
-    FRegistroC140: TRegistroC140List;  /// BLOCO C - Lista de RegistroC140 (FILHO) 
+    FRegistroC140: TRegistroC140List;  /// BLOCO C - Lista de RegistroC140 (FILHO)
     FRegistroC160: TRegistroC160List;  /// BLOCO C - Lista de RegistroC160 (FILHO)
     FRegistroC165: TRegistroC165List;  /// BLOCO C - Lista de RegistroC165 (FILHO)
     FRegistroC170: TRegistroC170List;  /// BLOCO C - Lista de RegistroC170 (FILHO)
@@ -203,6 +203,8 @@ type
     FRegistroC186: TRegistroC186List;  /// BLOCO C - Lista de RegistroC186 (FILHO)
     FRegistroC190: TRegistroC190List;  /// BLOCO C - Lista de RegistroC190 (FILHO) 
     FRegistroC195: TRegistroC195List;  /// BLOCO C - Lista de RegistroC195 (FILHO)
+
+    FRegistrosAdicionais: TStrings;    /// Registros customizados, filhos de C100
   public
     constructor Create(); virtual; /// Create
     destructor Destroy; override; /// Destroy
@@ -251,6 +253,8 @@ type
     property RegistroC186: TRegistroC186List read FRegistroC186 write FRegistroC186;
     property RegistroC190: TRegistroC190List read FRegistroC190 write FRegistroC190;
     property RegistroC195: TRegistroC195List read FRegistroC195 write FRegistroC195;
+
+    property RegistrosAdicionais: TStrings read FRegistrosAdicionais;
   end;
 
   /// Registro C100 - Lista
@@ -4535,6 +4539,7 @@ begin
   FRegistroC186 := TRegistroC186List.Create;  /// BLOCO C - Lista de RegistroC186 (FILHO)
   FRegistroC190 := TRegistroC190List.Create;  /// BLOCO C - Lista de RegistroC190 (FILHO)
   FRegistroC195 := TRegistroC195List.Create;  /// BLOCO C - Lista de RegistroC110 (FILHO)
+  FRegistrosAdicionais := TStringList.Create;
 end;
 
 destructor TRegistroC100.Destroy;
@@ -4552,6 +4557,7 @@ begin
   FRegistroC186.Free;
   FRegistroC190.Free;
   FRegistroC195.Free;
+  FRegistrosAdicionais.Free;
   inherited;
 end;
 
