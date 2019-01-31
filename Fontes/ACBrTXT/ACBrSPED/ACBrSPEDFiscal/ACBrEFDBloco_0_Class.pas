@@ -629,7 +629,7 @@ begin
                LFill(NUM) +
                LFill(COMPL) +
                LFill(BAIRRO) +
-               DadosAdicionais );
+               DadosAdicionais);
         end;
         /// Registros FILHOS
         WriteRegistro0175( Reg0001.Registro0150.Items[intFor] );
