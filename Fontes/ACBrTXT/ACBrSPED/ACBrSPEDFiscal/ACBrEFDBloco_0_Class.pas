@@ -459,7 +459,8 @@ begin
                    LFill( IM ) +
                    LFill( SUFRAMA ) +
                    LFill( strIND_PERFIL ) +
-                   LFill( Integer(IND_ATIV), 1 );
+                   LFill( Integer(IND_ATIV), 1 ) +
+                   DadosAdicionais;
        ///
        if Assigned(FOnWriteRegistro0000) then
           FOnWriteRegistro0000(strLinha);

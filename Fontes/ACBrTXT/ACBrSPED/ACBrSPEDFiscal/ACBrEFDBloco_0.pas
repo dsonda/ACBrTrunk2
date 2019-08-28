@@ -88,6 +88,7 @@ type
     fSUFRAMA: String;             /// Número de inscrição do contribuinte:
     fIND_PERFIL: TACBrPerfil;     /// Perfil de apresentação do arquivo fiscal: A - Perfil A / B - Perfil B / C - Perfil C
     fIND_ATIV: TACBrIndAtiv;      /// Indicador de tipo de atividade: 0 - Industrial ou equiparado a industrial; 1 - Outros.
+    fDadosAdicionais: string;     /// Dados adicionais para concatenar ao final da linha
   public
     property COD_VER: TACBrVersaoLeiauteSPEDFiscal read FCOD_VER write FCOD_VER;
     property COD_FIN: TACBrCodFin read FCOD_FIN write FCOD_FIN;
@@ -103,6 +104,7 @@ type
     property SUFRAMA: String read FSUFRAMA write FSUFRAMA;
     property IND_PERFIL: TACBrPerfil read FIND_PERFIL write FIND_PERFIL;
     property IND_ATIV: TACBrIndAtiv read FIND_ATIV write FIND_ATIV;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
   end;
 
   /// Registro 0001 - ABERTURA DO BLOCO 0
