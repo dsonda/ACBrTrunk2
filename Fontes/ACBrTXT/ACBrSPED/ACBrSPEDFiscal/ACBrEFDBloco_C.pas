@@ -325,6 +325,7 @@ type
   private
     fCOD_INF: String;       /// Código da informação complementar do documento fiscal (campo 02 do Registro 0450)
     fTXT_COMPL: String;    /// Descrição complementar do código de referência.
+    fDadosAdicionais: string;      /// Dados adicionais para concatenar ao final da linha
 
     FRegistroC111: TRegistroC111List;  /// BLOCO C - Lista de RegistroC111 (FILHO fo FILHO)
     FRegistroC112: TRegistroC112List;  /// BLOCO C - Lista de RegistroC111 (FILHO fo FILHO)
@@ -338,6 +339,7 @@ type
 
     property COD_INF: String read FCOD_INF write FCOD_INF;
     property TXT_COMPL: String read FTXT_COMPL write FTXT_COMPL;
+    property DadosAdicionais: string read fDadosAdicionais write fDadosAdicionais;
     /// Resgistro FILHO do FILHO
     property RegistroC111: TRegistroC111List read FRegistroC111 write FRegistroC111;
     property RegistroC112: TRegistroC112List read FRegistroC112 write FRegistroC112;

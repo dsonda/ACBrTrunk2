@@ -1512,7 +1512,8 @@ begin
         begin
           Add( LFill('C110') +
                LFill( COD_INF ) +
-               LFill( TXT_COMPL) ) ;
+               LFill( TXT_COMPL) +
+               DadosAdicionais );
         end;
         /// Registro FILHOS do FILHO
         WriteRegistroC111( RegC100.RegistroC110.Items[intFor] ) ;
