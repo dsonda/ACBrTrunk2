@@ -509,6 +509,7 @@ begin
       FfrxReport.ShowProgress := False;
 
       FfrxReport.EngineOptions.SilentMode := True;
+      FfrxReport.EngineOptions.NewSilentMode := simReThrow;
       FfrxReport.EngineOptions.EnableThreadSafe := True;
       FfrxReport.EngineOptions.DestroyForms := False;
       FfrxReport.PreviewOptions.AllowEdit := False;
