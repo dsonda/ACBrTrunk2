@@ -438,6 +438,7 @@ begin
         frxReport.ShowProgress := False;
 
         frxReport.EngineOptions.SilentMode := True;
+        frxReport.EngineOptions.NewSilentMode := simReThrow;
         frxReport.EngineOptions.EnableThreadSafe := True;
         frxReport.EngineOptions.DestroyForms := False;
         frxReport.PreviewOptions.AllowEdit := False;
