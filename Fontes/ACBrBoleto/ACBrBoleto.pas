@@ -5797,7 +5797,7 @@ begin
         if not AValidaCodCedente then
         begin
           if (not LeCedenteRetorno) and
-             ((StrToIntDef(AAgencia,0) <> StrToIntDef(OnlyNumber(Cedente.Agencia),0)) or
+             ((AAgencia <> RightStr(OnlyNumber(Cedente.Agencia), Length(AAgencia))) or
               (AContaCedente <> RightStr(OnlyNumber( Cedente.Conta  ),Length(AContaCedente)))
              ) then
             raise EACBrBoleto.CreateFmt(ACBrStr('Agencia: %s \ Conta: %s do arquivo não correspondem aos dados do Cedente!')
