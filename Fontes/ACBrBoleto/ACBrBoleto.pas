@@ -2962,7 +2962,7 @@ begin
         if not AValidaCodCedente then
         begin
           if (not LeCedenteRetorno) and
-             ((AAgencia <> OnlyNumber(Cedente.Agencia)) or
+             ((AAgencia <> RightStr(OnlyNumber(Cedente.Agencia), Length(AAgencia))) or
               (AContaCedente <> RightStr(OnlyNumber( Cedente.Conta  ),Length(AContaCedente)))
              ) then
             raise Exception.CreateFmt(ACBrStr('Agencia: %s \ Conta: %s do arquivo não correspondem aos dados do Cedente!')
