@@ -392,7 +392,9 @@ var wLinha: String;
 begin
   aTotal := 0;
   aCount := 0;
-  aAgencia := PadLeft(RightStr( ACBrBanco.ACBrBoleto.Cedente.Agencia, 5), 5, '0');
+//  aAgencia := PadLeft(RightStr( ACBrBanco.ACBrBoleto.Cedente.Agencia, 5), 5, '0');
+  aAgencia := PadLeft(RightStr(ACBrBanco.ACBrBoleto.Cedente.Agencia, 4), 4, '0') +
+    PadLeft(ACBrBanco.ACBrBoleto.Cedente.AgenciaDigito, 1, '0');
 
   aConta := PadLeft(ACBrBanco.ACBrBoleto.Cedente.Conta, 8, '0') +
               PadLeft(ACBrBanco.ACBrBoleto.Cedente.ContaDigito, 1, '0');
@@ -894,7 +896,9 @@ begin
     else
       tipoInscricao := '02';
 
-    aAgencia := PadLeft(RightStr( ACBrBoleto.Cedente.Agencia, 5), 5, '0');
+//    aAgencia := PadLeft(RightStr( ACBrBoleto.Cedente.Agencia, 5), 5, '0');
+    aAgencia := PadLeft(RightStr(ACBrBoleto.Cedente.Agencia, 4), 4, '0') +
+      PadLeft(ACBrBoleto.Cedente.AgenciaDigito, 1, '0');
 
     aConta := PadLeft(ACBrBoleto.Cedente.Conta, 8, '0') +
               PadLeft(ACBrBoleto.Cedente.ContaDigito, 1, '0');
