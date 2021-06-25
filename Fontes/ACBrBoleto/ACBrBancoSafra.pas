@@ -1291,7 +1291,9 @@ begin
   begin
     FatorVencimento  := CalcularFatorVencimento(ACBrTitulo.Vencimento);
     valorDocumento   := IntToStrZero(Round(ACBrTitulo.ValorDocumento * 100), 10);
-    agencia          := PadLeft(RightStr(Cedente.Agencia,5), 5, '0');
+//    agencia          := PadLeft(RightStr(Cedente.Agencia,5), 5, '0');
+    agencia          := PadLeft(RightStr(Cedente.Agencia, 4), 4, '0') +
+                        PadLeft(Cedente.AgenciaDigito, 1, '0');
     conta            := PadLeft(Cedente.Conta, 8, '0');
     ContaDigito      := PadLeft(Cedente.ContaDigito, 1, '0');
     NossoNumero      := PadLeft(RightStr(ACBrTitulo.NossoNumero,9),9,'0');
