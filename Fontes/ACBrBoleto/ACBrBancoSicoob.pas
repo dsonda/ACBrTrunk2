@@ -1268,6 +1268,7 @@ end;
 function TACBrBancoSicoob.CodMotivoRejeicaoToDescricao(
   const TipoOcorrencia: TACBrTipoOcorrencia; CodMotivo: Integer): String;
 begin
+  Result := '';
   case TipoOcorrencia of
     //Códigos de rejeições de '01' a '95' associados aos códigos de movimento '02', '03', '26' e '30'
     toRetornoRegistroConfirmado, toRetornoRegistroRecusado,
