@@ -176,14 +176,8 @@ begin
   FfrxReport.EnabledDataSets.Add(FfrxCedente);
 end;
 
-procedure TdmACBrBoletoFCFR.frxReportBeforePrint(Sender: TfrxReportComponent);
-begin
-  ImprimeLogoMarca('Logo_1');
-  ImprimeLogoMarca('Logo_2');
-  ImprimeLogoMarca('Logo_3');
-end;
-
 { TACBrBoletoFCFR }
+
 constructor TACBrBoletoFCFR.Create(AOwner: TComponent);
 begin
   inherited Create(AOwner);
