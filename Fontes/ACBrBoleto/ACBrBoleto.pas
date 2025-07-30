@@ -6170,12 +6170,17 @@ function TACBrBancoClass.DefineTipoDiasProtesto(const ACBrTitulo: TACBrTitulo): 
 begin
   with ACBrTitulo do
   begin
-    case TipoDiasProtesto of
-      diCorridos       : Result := '1';
-      diUteis          : Result := '2';
+    if (DiasDeProtesto > 0) or (DataProtesto > 0) then
+    begin
+      case TipoDiasProtesto of
+         diCorridos       : Result := '1';
+         diUteis          : Result := '2';
+      else
+         Result := '3';
+      end;
+    end
     else
       Result := '3';
-    end;
   end;
 end;
 
