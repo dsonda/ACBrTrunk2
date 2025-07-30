@@ -557,6 +557,8 @@ begin
 
      {Tipo de Avalista}
      LTipoAvalista := DefineTipoSacadoAvalista(ACBrTitulo);
+     if LTipoAvalista = '0' then
+      LTipoAvalista := ' ';
 
       if LayoutVersaoArquivo = 002 then // Grafeno
       begin
@@ -572,7 +574,7 @@ begin
         LDebitoAutomatico   := 'N';
         LInstrucoesProtesto := sProtesto;
         LMensagemCedente    := LTipoAvalista                                             + // 335 a 335 - Tipo de Inscrição 0 isento 1 cpf 2 cnpj 3 pis/pasep 9 outros
-                               PadLeft(OnlyNumber(Sacado.SacadoAvalista.CNPJCPF),14,'0') + // 336 a 350 - Número de Inscrição do Avalista
+                               PadRight(OnlyNumber(Sacado.SacadoAvalista.CNPJCPF),14,' ') + // 336 a 350 - Número de Inscrição do Avalista
                                PadRight(Sacado.SacadoAvalista.NomeAvalista, 40, ' ');      // 351 a 394 - Nome do Avalista
       end;
 
